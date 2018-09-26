@@ -27,7 +27,7 @@ int main(){
 }
 int is_anagram(string arr1,string arr2 ){
 	int a[26]={0};
-	int i;
+	register int i,j;
 	for( i=0;arr1[i]!='\0' && arr2[i]!='\0';i++){
 
 			a[arr1[i]-'a']++;
@@ -37,7 +37,7 @@ int is_anagram(string arr1,string arr2 ){
 			return 0; // strings are of different length
 	}
 
-	for(int j=0;j<26;j++){
+	for(j=0;j<26;j++){
 		if(a[j]){
 			return 0;// strings are not anagrams
 		}
