@@ -5,11 +5,11 @@ int is_anagram(string ,string );
 int main(){
 	string str[]={"cat","dog","god","tca"};
 	int count=sizeof(str)/sizeof(str[0]);
-		
+	register int i,j; // for fast accessing of location
 		cout<<"[";
-	for (int i = 0; i < count-1; ++i)
+	for (i = 0; i < count-1; ++i)
 	{
-		for (int  j= i+1; j < count; j++)
+		for (j= i+1; j < count; j++)
 		{
 			/* code */
 			int c=is_anagram(str[i],str[j]);
